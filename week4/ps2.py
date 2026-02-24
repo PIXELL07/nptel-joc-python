@@ -30,3 +30,18 @@
 # {'A':[10,20], 'B':[30]} - A
 # {'X':[50,50], 'Y':[40,40,10]} - X
 # {'A':[1,1], 'B':[1,1]}  A
+
+# code:
+
+def top_student(records):
+    top_name = None
+    top_total = -1
+    
+    for name, marks in records.items():
+        total = sum(marks)
+        if total > top_total:
+            top_total = total
+            top_name = name
+    
+    return top_name
+  
