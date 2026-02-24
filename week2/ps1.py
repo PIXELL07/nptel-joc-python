@@ -15,10 +15,10 @@
 # Print the required word.
 
 
-# Test Case 1	 # Test Case 2        # Test Case 3
-# x,y,z          # red,blue,green     # one,two,ten
-#  z             #  red               #  ten
-# z\n            # red\n              # ten\n
+# Test Case 1	   # Test Case 2             # Test Case 3
+# input: x,y,z     input: red,blue,green      input: one,two,ten
+# output: z        output: red                output: ten
+# z\n              red\n                      ten\n
  
 
 # ex :
