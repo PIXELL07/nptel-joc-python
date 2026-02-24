@@ -25,4 +25,22 @@
 # 2) 7.7 8.8 9.9
 # 3) 3.3 3.3 3.3
 
-# code:
+# 1) code:
+
+import math
+numbers = input().split()
+floored = [str(math.floor(float(num))) for num in numbers]
+print(",".join(floored))
+
+
+# 2) code: 
+# L = input().split()
+
+# for i in range(len(L)):
+#     L[i] = int(float(L[i]))
+
+# for i in range(len(L)):
+#     if i != len(L) - 1:
+#         print(L[i], end=",")
+#     else:
+#         print(L[i])
