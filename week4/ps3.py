@@ -28,3 +28,12 @@
 # If the input string is empty, return an empty dictionary {}.
 # Dictionary keys should appear in the order of first occurrence of characters in the string
 # (this matches Python’s dictionary behavior in py3).
+
+# Example Behaviour (for clarity)
+# "aab"   - {'a': 2, 'b': 1}
+# "abc"   - {'a': 1, 'b': 1, 'c': 1}
+# ""      - {}
+# "xyx"   - {'x': 2, 'y': 1}
+
+# code:
+
