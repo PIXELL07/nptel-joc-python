@@ -37,9 +37,9 @@
 
 # Example Behaviour (for clarity)
 
-# divisors(6) → [1, 2, 3, 6]
-# common_divisors(12, 18) → [1, 2, 3, 6]
-# divisors_upto(3) → {1: [1], 2: [1, 2], 3: [1, 3]}
+# divisors(6) - [1, 2, 3, 6]
+# common_divisors(12, 18) - [1, 2, 3, 6]
+# divisors_upto(3) - {1: [1], 2: [1, 2], 3: [1, 3]}
 
 # code:
 
