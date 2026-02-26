@@ -19,8 +19,14 @@
 # Loops (for, while) must NOT be used.
 # The * operator must NOT be used.
 
-# code:
+# code 1:
 
+# Why this works
+# Uses recursion only
+# Uses addition and subtraction only
+# No *, for, or while
+
+Correct for all non-negative integers
 def multiply(a, b):
     # Base case: anything times 0 is 0
     if b == 0:
@@ -28,3 +34,17 @@ def multiply(a, b):
     
     # Recursive case: a * b = a + a * (b - 1)
     return a + multiply(a, b - 1)
+
+# code 2: this works too :
+# Optional optimization (same rules, faster for large numbers):
+
+def multiply(a, b):
+    if b == 0:
+        return 0
+    if b == 1:
+        return a
+    if b % 2 == 0:
+        half = multiply(a, b // 2)
+        return half + half
+    else:
+        return a + multiply(a, b - 1)
