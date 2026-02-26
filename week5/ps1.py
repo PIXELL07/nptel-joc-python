@@ -21,13 +21,13 @@
 
 # code 1:
 
-# Why this works
+# Why this works :
 # Uses recursion only
 # Uses addition and subtraction only
 # No *, for, or while
+# Correct for all non-negative integers
 
-Correct for all non-negative integers
-def multiply(a, b):
+def multiply(a, b):   
     # Base case: anything times 0 is 0
     if b == 0:
         return 0
