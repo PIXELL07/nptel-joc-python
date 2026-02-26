@@ -20,3 +20,11 @@
 # The * operator must NOT be used.
 
 # code:
+
+def multiply(a, b):
+    # Base case: anything times 0 is 0
+    if b == 0:
+        return 0
+    
+    # Recursive case: a * b = a + a * (b - 1)
+    return a + multiply(a, b - 1)
