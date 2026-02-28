@@ -24,3 +24,19 @@
 # n // 10 removes the last digit
 # Keep summing recursively
 
+# code:
+
+def digit_sum(n):
+    if n == 0:
+        return 0
+    return n % 10 + digit_sum(n // 10)
+
+# Example:
+
+For digit_sum(123):
+
+digit_sum(123)
+= 3 + digit_sum(12)
+= 3 + 2 + digit_sum(1)
+= 3 + 2 + 1 + digit_sum(0)
+= 6
