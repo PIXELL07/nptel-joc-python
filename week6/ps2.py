@@ -25,3 +25,10 @@
 # Output must be a tuple.
 
 # code:
+
+def course_ends(courses):
+    if len(courses) == 0:
+        return ()
+    if len(courses) == 1:
+        return (courses[0], courses[0])
+    return (courses[0], courses[-1])
