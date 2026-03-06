@@ -31,3 +31,10 @@
 
 
 # code:
+
+def unique_elements(L):
+    result = []
+    for item in L:
+        if item not in result:
+            result.append(item)
+    return result
