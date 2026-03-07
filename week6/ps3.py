@@ -30,3 +30,10 @@
 # common_elements([1,1,2],[1,2,2]) → [1, 2]
 
 # code:
+
+def common_elements(L1, L2):
+    result = []
+    for item in L1:
+        if item in L2 and item not in result:
+            result.append(item)
+    return result
