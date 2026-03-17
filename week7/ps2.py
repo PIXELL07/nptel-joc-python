@@ -22,3 +22,31 @@
 # 1 ≤ length of s, t ≤ 5 × 10⁴
 
 # Strings contain only lowercase English letters
+
+# code:
+def isAnagram(s, t):
+    # If lengths differ, cannot be anagrams
+    if len(s) != len(t):
+        return False
+
+    count = {}
+
+    # Count characters in s
+    for ch in s:
+        count[ch] = count.get(ch, 0) + 1
+
+    # Subtract counts using t
+    for ch in t:
+        if ch not in count or count[ch] == 0:
+            return False
+        count[ch] -= 1
+
+    return True
+
+
+# Input
+s = input().strip()
+t = input().strip()
+
+# Output
+print("true" if isAnagram(s, t) else "false")
