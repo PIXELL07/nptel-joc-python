@@ -35,3 +35,31 @@
 # The mapping is consistent and one-to-one, so the output is true.
 
 # code:
+def isIsomorphic(s, t):
+    if len(s) != len(t):
+        return False
+
+    s_map = {}
+    t_map = {}
+
+    for i in range(len(s)):
+        char_s = s[i]
+        char_t = t[i]
+
+        # Check consistency in both directions
+        if (char_s in s_map and s_map[char_s] != char_t) or \
+           (char_t in t_map and t_map[char_t] != char_s):
+            return False
+
+        s_map[char_s] = char_t
+        t_map[char_t] = char_s
+
+    return True
+
+
+# Input
+s = input().strip()
+t = input().strip()
+
+# Output
+print("true" if isIsomorphic(s, t) else "false")
