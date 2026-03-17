@@ -19,3 +19,16 @@
 # Strings contain only lowercase English letters
 
 # code:
+
+n = int(input())
+strings = [input().strip() for _ in range(n)]
+
+prefix = min(strings)
+suffix = max(strings)
+
+i = 0
+while i < len(prefix) and prefix[i] == suffix[i]:
+    i += 1
+
+result = prefix[:i]
+print(result if result else '""')
