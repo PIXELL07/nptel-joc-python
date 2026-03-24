@@ -20,3 +20,15 @@
 # 0 ≤ number of words in the sentence ≤ 10³
 # 0 ≤ number of stopwords ≤ 10³
 # All words contain only lowercase English letters
+
+# code:
+
+# Read the input sentence and stopwords
+sentence = input().strip().split()
+stopwords = set(input().strip().split())
+
+# Filter out the stopwords
+result = [word for word in sentence if word not in stopwords]
+
+# Print the cleaned sentence
+print(" ".join(result))
