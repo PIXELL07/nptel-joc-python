@@ -20,3 +20,14 @@
 # Constraints:
 # 1 ≤ number of words ≤ 10³
 # Each word contains only lowercase English letters
+
+# code:
+
+from collections import Counter
+
+words = input().split()
+
+# Count word lengths
+length_counts = Counter(len(word) for word in words)
+
+print(dict(length_counts))
