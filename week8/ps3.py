@@ -23,3 +23,17 @@
 # Constraints:
 # 1 ≤ N ≤ 10³
 # Node labels may be integers or lowercase letters
+
+# code:
+
+n = int(input().strip())
+degree = {}
+
+for _ in range(n):
+    parts = input().split()
+    node = parts[0]
+    neighbors = parts[1:]
+    
+    degree[node] = len(neighbors)
+
+print(degree)
