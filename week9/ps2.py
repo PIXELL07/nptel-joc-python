@@ -1,34 +1,45 @@
-# ** Circular Elimination Game **
+# ** Pixel Intensity Quantizer **
 
 # Problem Statement:
+# You are given a set of pixel intensity values through standard input.
+# Each pixel intensity is an integer between 0 and 255.
+# Your task is to group these values into 8 discrete buckets based on the following rule:
 
-# You are given a group of players arranged in a circle.
-# Starting from the first player, every k-th player is eliminated in a circular manner.
-# The elimination continues until only one player remains.
-# Your task is to simulate this process using the given inputs and determine the position (1-indexed) of the last remaining player.
+# 0–31 → bucket 0
+
+# 32–63 → bucket 1
+
+# 64–95 → bucket 2
+
+# 96–127 → bucket 3
+
+# 128–159 → bucket 4
+
+# 160–191 → bucket 5
+
+# 192–223 → bucket 6
+
+# 224–255 → bucket 7
+
+# For each input value, determine its bucket and print the resulting list.
 
 # Input Format:
-# First line contains an integer n — the number of players
-# Second line contains an integer k — the step count for elimination
+# First line contains an integer n — number of intensity values
+# Second line contains n space-separated integers representing pixel intensities
 
 # Output Format:
-# Print a single integer representing the position of the last remaining player
+# Print a list of integers representing the bucket value for each input intensity
+# The order of elements must be preserved
 
 # Constraints:
 # 1 ≤ n ≤ 10⁵
-# 1 ≤ k ≤ 10⁵
+# 0 ≤ intensity value ≤ 255
 
 # code:
 
-def josephus(n, k):
-    result = 0  # 0-based index
-    for i in range(1, n + 1):
-        result = (result + k) % i
-    return result + 1  # convert to 1-based index
-
-# Input
 n = int(input().strip())
-k = int(input().strip())
+values = list(map(int, input().split()))
 
-# Output
-print(josephus(n, k))
+result = [v // 32 for v in values]
+
+print(result)
