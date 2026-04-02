@@ -1,0 +1,37 @@
+# ** Academic Date Gap Calculator **
+
+# Problem Statement:
+# You are given two dates through standard input.
+# Each date is provided in the format YYYY-MM-DD.
+# Your task is to calculate the absolute number of days between the two dates and print the result.
+# The order of dates does not matter.
+# Leap years must be handled correctly.
+# If both dates are the same, the result should be 0.
+
+# Input Format:
+# First line contains the first date in YYYY-MM-DD format
+# Second line contains the second date in YYYY-MM-DD format
+
+# Output Format:
+# Print a single integer representing the absolute difference in days between the two dates
+
+# Constraints:
+# Years are in the range supported by the Python datetime module
+# Dates are guaranteed to be valid
+
+# code:
+
+from datetime import datetime
+
+# Read input dates
+date1 = input().strip()
+date2 = input().strip()
+
+# Convert strings to datetime objects
+d1 = datetime.strptime(date1, "%Y-%m-%d")
+d2 = datetime.strptime(date2, "%Y-%m-%d")
+
+# Calculate absolute difference in days
+diff = abs((d2 - d1).days)
+
+print(diff)
