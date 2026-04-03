@@ -2,6 +2,7 @@ Learning the NPTEL course "The Joy of Computing using Python" is useful because 
 
 Topics Covered:
 
+- Scratch
 - Variables and Expressions
 - Loops and Conditionals
 - Lists, Tuples, and Dictionaries
